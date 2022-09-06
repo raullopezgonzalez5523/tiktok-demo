@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>incocnitt0</title>
+    <style>
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #111;
+  position: relative;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(45deg, #222, #444);
+}
+
+.item{
+  font-size: 6rem;
+  line-height: 6rem;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #fff;
+  animation: shaking .2s steps(6, end) infinite;
+  white-space: nowrap;
+  mix-blend-mode: screen;
+}
+
+.item figcaption {
+  display: inline;
+}
+
+.item .svg-tiktok{
+  fill: #fff;
+  width: 8rem;
+  height: 8rem;
+  transform: translateY(1rem);
+}
+
+.item.zh .svg-tiktok{
+  transform: translateY(1.5rem);
+}
+
+@keyframes shaking{
+  0%{
+    /* Using filter cause text-shadow doesn't support svgs */
+    filter: drop-shadow(3px 3px 0px #0ff) drop-shadow(-3px -3px 0px #f00);
+    transform: translate(1px, 1px);}
+  20%{
+    filter: drop-shadow(-3px 3px 0px #0ff) drop-shadow(3px -3px 0px #f00);
+    transform: translate(-2px, 1px);}
+  40%{
+    filter: drop-shadow(3px -3px 0px #0ff) drop-shadow(3px -3px 0px #f00);
+    transform: translate(1px, -1px);}
+  60%{
+    filter: drop-shadow(-3px -3px 0px #0ff) drop-shadow(3px 3px 0px #f00);
+    transform: translate(-1px, -1px);}
+  80%{
+    filter: drop-shadow(-2px 3px 0px #0ff) drop-shadow(-3px 2px 0px #f00);
+    transform: translate(2px, 0px);}
+  100%{
+    filter: drop-shadow(-3px 1px 0px #0ff) drop-shadow(1px -3px 0px #f00);
+    transform: translate(1px, 1px);}
+}
+    </style>
+</head>
+<body>
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <symbol id="icon-tiktok" viewBox="0 0 512 512">
+            <title>tiktok</title>
+            <path style="fill: #fff" d="M256,352V32h64c0,32,64,96,128,96v64c-64,0-128-32-128-32V352c0,128-128,128-128,128S64,480,64,352,192,224,192,224c32,0,40,10,40,10v64s-8-10-40-10c0,0-64,0-64,64s64,64,64,64S256,416,256,352Z"/>
+          </symbol>
+        </defs>
+      </svg>
+      
+      
+      
+      <main class="container">
+        
+        <figure class="item en">
+          <svg class="svg-tiktok">
+            <use xlink:href="#icon-tiktok"></use>
+          </svg>
+          <figcaption>TikTok</figcaption>
+        </figure>
+        
+        <figure class="item zh">
+          <svg class="svg-tiktok">
+            <use xlink:href="#icon-tiktok"></use>
+          </svg>
+          <figcaption>@incocnitt0</figcaption>
+        </figure> 
+        
+      </main>
+</body>
+</html>
